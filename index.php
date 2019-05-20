@@ -5,7 +5,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/topbar.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 ?>
 <div class="content-wrapper">
-<div class="content">
+<div class="center-text">
+<h1>Title Here</h1>
+</div>
+<div class="content-block">
 Content here
 </div>
 </div>

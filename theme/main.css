@@ -113,7 +113,7 @@ h3 {
   width: 100%;
   padding-top: 20px;
 }
-.content {
+.content-block {
   padding: 20px;
   box-shadow: #859196 0 0 20px;
   background: white;
@@ -123,5 +123,8 @@ h3 {
 }
 .footer {
   margin-top: 20px;
+  text-align: center;
+}
+.center-text {
   text-align: center;
 }
