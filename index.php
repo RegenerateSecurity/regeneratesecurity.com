@@ -1,8 +1,7 @@
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="/theme/main.css" />
-</head>
-<body>
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'] .  '/headers.php';
+include_once $_SERVER['DOCUMENT_ROOT'] .  '/head.php';
+?>
   <div class="cookie-bar">
 Cookies go here init
   <div>
