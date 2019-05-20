@@ -16,7 +16,7 @@ $payload = array('ping' => 'hello');
 $response = postJson('hello', '1.0', json_encode($payload));
 $responseJson = json_decode($response);
 if ($responsejson === null) {
-  print "API ERROR";
+  print "API ERROR<br/>" . $response;
 }
 else if ($responseJson['ping'] == "olleh") {
   print "API said hi :)";
