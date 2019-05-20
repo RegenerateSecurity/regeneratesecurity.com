@@ -55,3 +55,26 @@ h2 {
 h3 {
   font-weight: 400;
 }
+.admin-button {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.top-bar {
+  text-align: right;
+  width: calc(100% - 20px);
+  background-color: black;
+  border-bottom: 2px solid gray;
+  color: white;
+  padding: 10px;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 14px;
+}
+.logo {
+  width: -moz-fit-content;
+  width: fit-content;
+  float: left;
+}
+
