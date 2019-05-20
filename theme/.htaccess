@@ -1,0 +1,3 @@
+Header set X-Frame-Options "DENY"
+Header set Content-Security-Policy "script-src: 'self';"
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
