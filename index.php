@@ -14,6 +14,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <?php
 $payload = array('ping' => 'hello');
 $response = postJson('hello', '1.0', json_encode($payload));
+print $response;
 ?>
 </div>
 </div>
