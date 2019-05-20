@@ -109,7 +109,12 @@ h3 {
   display: inline-block;
   padding: 10px;
 }
+.content-wrapper { 
+  width: 100%;
+  padding-top: 20px;
+}
 .content {
+  padding: 20px;
   box-shadow: #859196 0 0 20px;
   background: white;
   width: 95%;
