@@ -18,8 +18,11 @@ $responseJson = json_decode($response);
 if ($responsejson === null) {
   print "API ERROR";
 }
-else {
+else if ($responseJson['ping'] == "olleh") {
   print "API said hi :)";
+}
+else {
+  print "Unexpected error";
 }
 ?>
 </div>
