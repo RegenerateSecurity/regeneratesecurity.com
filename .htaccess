@@ -1,0 +1,9 @@
+Header unset X-Powered-By
+ErrorDocument 404 /error/404/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^cookies\/$ /cookies.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^error\/404\/$ /error/404.php [L]
+
