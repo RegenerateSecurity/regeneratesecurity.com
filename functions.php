@@ -48,7 +48,7 @@ function postJson($endpoint, $version, $payload) {
     $signature = hash_hmac('sha3-512' , $payload , $apiHMAC);
 
     // Setup cURL
-    $ch = curl_init('https://api.regeneratesecurity.com/api/'.$version.'/'.$endpoint);
+    $ch = curl_init('https://api.regeneratesecurity.com/api/'.$version.'/'.$endpoint.'/');
     curl_setopt_array($ch, array(
         CURLOPT_POST => TRUE,
         CURLOPT_RETURNTRANSFER => TRUE,
