@@ -6,6 +6,6 @@
 </head>
 <body>
 <div class="cookie-law">
-<div class="cookie-text"><p>This site uses cookies; You can <a href="/cookies.php">click here</a> to change your cookie settings or learn more.</p></div>
+<div class="cookie-text"><p><a href="/cookies.php">This site uses cookies; You can click here to change your cookie settings or learn more.</a></p></div>
 <div class="cookie-button"><input class="admin-button" type="button" value="Dismiss"></div></p>
 </div>
