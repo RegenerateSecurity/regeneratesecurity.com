@@ -39,6 +39,7 @@ body {
   margin: 0;
 }
 .api-status {
+  background: black;
   width: 100%;
   color: red;
   font-size: 12pt;
