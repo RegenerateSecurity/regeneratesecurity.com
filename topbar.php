@@ -1,6 +1,6 @@
 <?php
 function drawTopBar() {
-  print '<a href="/login.php">Sign in</a>' . | . '<a href="/register.php">Register</a>';
+  print '<a href="/login.php">Sign in</a>' . ' | ' . '<a href="/register.php">Register</a>';
 }
 ?>
 
