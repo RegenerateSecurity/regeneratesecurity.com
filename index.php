@@ -14,16 +14,15 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <?php
 $payload = array('ping' => 'hello');
 $response = postJson('hello', '1.0', json_encode($payload));
-$responseJson = json_decode($response);
+$responseJson = json_decode($response, true);
 if ($responseJson === null) {
   print "API ERROR<br/>" . $response;
 }
-//else if ($responseJson['ping'] == "olleh") {
-//  print "API said hi :)";
-//}
+else if ($responseJson['ping'] == "olleh") {
+  print "API said hi :)";
+}
 else {
   print "Unexpected error";
-  var_dump($responseJson);
 }
 ?>
 </div>
