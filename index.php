@@ -12,7 +12,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <p>Description here</p>
 </div>
 <div class="content-block">
-<?php postJson('hello/', '1.0', 'ping') ?>
+<?php
+$response = postJson('hello/', '1.0', 'ping');
+print $response;
+?>
 Content here
 </div>
 </div>
