@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] .  '/apiHMAC.php';
+include_once $_SERVER['DOCUMENT_ROOT'] .  '/hmac.php';
 
 // A function to execute a prepared query against an array of vars
 function execPrepare($mysqli, $query, $param) {
