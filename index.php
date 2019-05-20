@@ -18,9 +18,9 @@ $responseJson = json_decode($response);
 if ($responseJson === null) {
   print "API ERROR<br/>" . $response;
 }
-else if ($responseJson['ping'] == "olleh") {
-  print "API said hi :)";
-}
+//else if ($responseJson['ping'] == "olleh") {
+//  print "API said hi :)";
+//}
 else {
   print "Unexpected error";
   var_dump($responseJson);
