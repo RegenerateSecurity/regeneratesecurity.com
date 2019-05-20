@@ -45,6 +45,7 @@ function display($input) {
 }
 
 function postJson($endpoint, $version, $payload) {
+    global $apiHMAC;
     $signature = hash_hmac('sha3-512' , $payload , $apiHMAC);
 
     // Setup cURL
