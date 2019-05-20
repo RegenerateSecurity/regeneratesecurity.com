@@ -23,6 +23,7 @@ else if ($responseJson['ping'] == "olleh") {
 }
 else {
   print "Unexpected error";
+  var_dump($responseJson);
 }
 ?>
 </div>
