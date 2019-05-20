@@ -109,6 +109,9 @@ h3 {
   display: inline-block;
   padding: 10px;
 }
+.content {
+  box-shadow: #859196 0 0 20px;
+}
 .footer {
   margin-top: 20px;
   text-align: center;
