@@ -1,12 +1,14 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] .  '/functions.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/functions.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
 $securimage = new Securimage();
 
+// Input handling issues should be checked here and on the API
+// If they can be handled here then it prevents requests being
+// processed API-side which don't need to.
 if ($securimage->check($_POST['captcha_code']) == false) {
   softRedirect('/register.php?error=captcha');
 }
-// All of this should be API side.
 else if (!isset($_POST['email']) or !isset($_POST['password']) or !isset($_POST['confirm'])) {
   softRedirect('/register.php?error=missing');
 }
@@ -25,16 +27,18 @@ $response = postJson('usernameCheck', '1.0', json_encode(array('username' => $_P
 $responseJson = json_decode($response, true);
 if ($responseJson === null) {
   print 'API Error<br/>';
+  exit();
 }
-else if ($responseJson['result'] == "taken") {
+
+if ($responseJson['result'] == "taken") {
   softRedirect('/register.php?error=taken');
 }
-else if ($responseJson['result'] == "available") {
+
+if ($responseJson['result'] == "available") {
   $response = postJson('createUser', '1.0', json_encode(array('username' => $_POST['email'],'password' => $_POST['password'])));
   $responseJson = json_decode($response, true);
   if ($responseJson === null) {
     print 'API Error<br/>';
-    print $response;
   }
   else if ($responseJson['result'] == "created") {
     softRedirect('/profile.php');
@@ -47,21 +51,4 @@ else {
   softRedirect('/register.php?error=unknown');
 }
 
-//$email      = $_POST['email'];
-//$password   = $_POST['password'];
-//$salt       = openssl_random_pseudo_bytes(64);
-//$iterations = 10000;
-// TODO: It's weird that the algo is hardcoded but nothing else
-//$hash       = hash_pbkdf2('sha3-512', $password, $salt , $iterations);
-//$privs      = 0;
-//if (numPrepare($mysqli, "SELECT email FROM users WHERE email = ?;", array("s", $email))) {
-//  softRedirect('register.php?error=taken');
-//}
-//else {
-//  // TODO: Split this for readability
-//  $result = execPrepare($mysqli, "INSERT INTO users (email, salt, iterations, hash, privs) VALUES (?, ?, ?, ?, ?);", array("ssisi", $email, $salt, $iterations, $hash, $privs));
-//  $_SESSION['email'] = $email;
-//  $_SESSION['privs'] = $privs;
-//  softRedirect('/profile.php');
-//}
 ?>

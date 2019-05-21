@@ -9,8 +9,8 @@
 // Hit the API on each page request and check everything is okay
 $response = postJson('hello', '1.0', json_encode(array('ping' => 'hello')));
 $responseJson = json_decode($response, true);
-if ($responseJson === null or $responseJson['ping'] != "olleh") {
-  print '<div class="api-status">Service Status: API ERROR</div>';
+if ($responseJson === null or isset($responseJson['error'])) {
+  print '<div class="api-status">Service Status:' . htmlspecialchars($responseJson['error']) . '</div>';
 }
 ?>
 <div class="cookie-law">
