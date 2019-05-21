@@ -25,7 +25,7 @@ if (isset($_GET['error'])) {
   }
 }
 ?><p>
-          <form method="POST" action="process-login.php">
+          <form method="POST" action="/process-login/">
             <input class="login-input" name="email" type="text" placeholder="e-mail" />
             <input class="login-input" name="password" type="password" placeholder="password" autcomplete="off" />
             <img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" />
