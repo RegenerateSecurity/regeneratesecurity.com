@@ -24,13 +24,23 @@ $response = postJson('usernameCheck', '1.0', json_encode(array('username' => $_P
 $responseJson = json_decode($response, true);
 if ($responseJson === null) {
   print 'API Error<br/>';
-  print $response;
 }
 else if ($responseJson['result'] == "taken") {
-  print 'Username taken';
+  softRedirect('/register.php?error=taken');
 }
 else if ($responseJson['result'] == "available") {
-  print 'Username available';
+  $response = postJson('createUser', '1.0', json_encode(array('username' => $_POST['email'],'password' => $_POST['password'])));
+  $responseJson = json_decode($response, true);
+  if ($responseJson === null) {
+    print 'API Error<br/>';
+    print $response;
+  }
+  else if ($responseJson['result'] == "created") {
+    softRedirect('/profile.php');
+  }
+  else {
+    softRedirect('/register.php?error=unknown');
+  }
 }
 else {
   softRedirect('/register.php?error=unknown');
