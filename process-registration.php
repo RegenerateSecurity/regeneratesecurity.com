@@ -23,7 +23,8 @@ else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 $response = postJson('usernameCheck', '1.0', json_encode(array('username' => $_POST['email'])));
 $responseJson = json_decode($response, true);
 if ($responseJson === null) {
-  print 'API Error';
+  print 'API Error<br/>';
+  print $response;
 }
 else if ($responseJson['result'] == "taken") {
   print 'Username taken';
