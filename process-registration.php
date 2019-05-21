@@ -44,11 +44,11 @@ if ($responseJson['result'] == "available") {
     softRedirect('/profile.php');
   }
   else {
-    print htmlspecialchars($responseJson['error'])
+    print htmlspecialchars($responseJson['error']);
   }
 }
 else {
-  print htmlspecialchars($responseJson['error'])
+  print htmlspecialchars($responseJson['error']);
 }
 
 ?>
