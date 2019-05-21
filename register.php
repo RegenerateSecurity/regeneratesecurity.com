@@ -35,7 +35,7 @@ if (isset($_GET['error'])) {
   }
 }
           ?></p>
-          <form method="POST" action="process-registration.php">
+          <form method="POST" action="/process-registration/">
             <input class="login-input" name="email" type="text" placeholder="e-mail" />
             <input class="login-input" name="password" type="password" placeholder="password" autocomplete="off" />
             <input class="login-input" name="confirm" type="password" placeholder="confirm password" autocomplete="off" />
