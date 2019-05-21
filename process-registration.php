@@ -44,11 +44,13 @@ if ($responseJson['result'] == "available") {
     softRedirect('/profile.php');
   }
   else {
-    print htmlspecialchars($responseJson['error']);
+    print 'API Error: ' . htmlspecialchars($responseJson['error']);
+    exit();
   }
 }
 else {
-  print htmlspecialchars($responseJson['error']);
+  print 'API Error: ' . htmlspecialchars($responseJson['error']);
+  exit();
 }
 
 ?>

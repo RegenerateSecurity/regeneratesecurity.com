@@ -23,9 +23,10 @@ if ($responseJson === null) {
 
 if (isset($responseJson['token'])) {
   print htmlspecialchars($responseJson['token']));
+  exit();
 }
 else {
-  print 'API Error<br/>';
+  print 'API Error: ' . htmlspecialchars($responseJson['error']);
   exit();
 }
 
