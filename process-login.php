@@ -22,8 +22,8 @@ if ($responseJson === null) {
 }
 
 if (isset($responseJson['token'])) {
-  print htmlspecialchars($responseJson['token']);
-  exit();
+  setcookie ('sessionToken' , htmlspecialchars($responseJson['token']), $expires = time() + 21600, "/", "regeneratesecurity.com", true, true);
+  softRedirect('/profile/');
 }
 else {
   print 'API Error: ' . htmlspecialchars($responseJson['error']);

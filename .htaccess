@@ -13,6 +13,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^register\/$ /register.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^profile\/$ /profile.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^process-registration\/$ /process-registration.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
