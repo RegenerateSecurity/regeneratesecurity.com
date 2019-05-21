@@ -139,3 +139,42 @@ h3 {
 .black-text {
   color: black;
 }
+.uppercase-text {
+  text-transform: uppercase;
+}
+.login-block {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: #859196 0 0 20px;
+  background-color: #fff;
+}
+.login-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background-color: white;
+  font-family: inherit;
+}
+.dim-input {
+  background-color: #efefef;
+}
+.login-button {
+  width: 50%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  margin-bottom: 10px;
+  font-weight: bold;
+  background-color: #3CB371;
+  color: white;
+  font-size: 15px;
+}
+.red-text {
+  color: red;
+}

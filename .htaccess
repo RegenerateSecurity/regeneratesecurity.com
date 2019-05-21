@@ -7,5 +7,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^cookies\/$ /cookies.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^login\/$ /login.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^register\/$ /register.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^error\/404\/$ /error/404.php [L]
 
