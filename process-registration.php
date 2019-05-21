@@ -6,6 +6,7 @@ $securimage = new Securimage();
 if ($securimage->check($_POST['captcha_code']) == false) {
   softRedirect('/register.php?error=captcha');
 }
+// All of this should be API side.
 else if (!isset($_POST['email']) or !isset($_POST['password']) or !isset($_POST['confirm'])) {
   softRedirect('/register.php?error=missing');
 }
