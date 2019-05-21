@@ -16,5 +16,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^process-registration\/$ /process-registration.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^process-login\/$ /process-login.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^error\/404\/$ /error/404.php [L]
 
