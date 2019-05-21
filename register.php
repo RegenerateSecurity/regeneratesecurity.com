@@ -36,4 +36,6 @@ if (isset($_GET['error'])) {
       </div>
   </div>
 </div>
+<?php
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/footer.php';
+?>
