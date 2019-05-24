@@ -5,13 +5,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
 $securimage = new Securimage();
 
 if ($securimage->check($_POST['captcha_code']) == false) {
-  softRedirect('/login.php?error=captcha');
+  softRedirect('/login/?error=captcha');
 }
 else if (!isset($_POST['email']) or !isset($_POST['password'])) {
-  softRedirect('/login.php?error=missing');
+  softRedirect('/login/?error=missing');
 }
 else if ($_POST['email'] == "" or $_POST['password'] == "") {
-  softRedirect('/login.php?error=blank');
+  softRedirect('/login/?error=blank');
 }
 
 $response = postJson('authenticateUser', '1.0', json_encode(array('username' => $_POST['email'],'password' => $_POST['password'])));

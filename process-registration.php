@@ -41,16 +41,31 @@ if ($responseJson['result'] == "available") {
     print 'API Error<br/>';
   }
   else if ($responseJson['result'] == "created") {
-    softRedirect('/profile.php');
+    // TODO: When users lands on profile they should be authenticated
+    // COPY-PASTA From Login
+
+    $response = postJson('authenticateUser', '1.0', json_encode(array('username' => $_POST['email'],'password' => $_POST['password'])));
+    $responseJson = json_decode($response, true);
+    if ($responseJson === null) {
+      print 'API Error'; // This should never happen - but throw with an indicator that this was post createUser
+      // We should die not exit
+      exit();
+    }
+    if (isset($responseJson['token'])) {
+      setcookie ('sessionToken' , htmlspecialchars($responseJson['token']), $expires = time() + 21600, "/", "regeneratesecurity.com", true, true);
+      softRedirect('/profile/');
+    }
+    else {
+      print 'API Error: ' . htmlspecialchars($responseJson['error']); // - but throw with aan indicator this was post createUser;
+      exit(); // We should die
+    }
   }
   else {
-    print 'API Error: ' . htmlspecialchars($responseJson['error']);
-    exit();
+    die('API Error: ' . htmlspecialchars($responseJson['error']));
   }
 }
 else {
-  print 'API Error: ' . htmlspecialchars($responseJson['error']);
-  exit();
+  die('API Error: ' . htmlspecialchars($responseJson['error']));
 }
 
 ?>
