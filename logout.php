@@ -2,7 +2,7 @@
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/functions.php';
 
 if (isset($_COOKIE['sessionToken'])) {
-  $response = postJson('logoutSession', '1.0', json_encode(array('token' => $_SESSION['sessionToken'])));
+  $response = postJson('logoutSession', '1.0', json_encode(array('token' => $_COOKIE['sessionToken'])));
   $responseJson = json_decode($response, true);
   if ($responseJson === null) {
     print 'API Error'; // Handle me Daddy
