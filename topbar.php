@@ -1,7 +1,6 @@
 <?php
-
-function drawTopBar() {
-  global $session;
+function drawTopBar($session) {
+  var_dump $session;
   if (isset($session['privs']) and $session['privs'] > -1) {
     print '<a href="/profile/">Profile</a> | <a href="/logout/">Log Out</a>';
   }
@@ -13,5 +12,5 @@ function drawTopBar() {
 
 <div class="top-bar">
   <div class="logo"><a href="/">RegenSec</a></div>
-  <div><?php drawTopBar(); ?></div>
+  <div><?php drawTopBar($session); ?></div>
 </div>
