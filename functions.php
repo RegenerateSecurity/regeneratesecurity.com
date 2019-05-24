@@ -69,4 +69,14 @@ function postJson($endpoint, $version, $payload) {
 
     return $response;
 }
+
+// Check if a session exists and is still valid and store important data
+$response = postJson('sessionCheck', '1.0', json_encode(array('token' => $_COOKIE['sessionToken'])));
+$responseJson = json_decode($response, true);
+if (isset($responseJson['result']) and $responseJson['result'] == 'valid') {
+  $session array("privs" => $responseJson['privs'], $email => $responseJson['email']);
+}
+else {
+  $session array("privs" => -1);
+}
 ?>
