@@ -8,7 +8,7 @@ if (isset($_COOKIE['sessionToken'])) {
     print 'API Error'; // Handle me Daddy
   }
   else if (isset($responseJson['result'])) { // TODO: consider successful and invalid-logout separately
-   header('/';)
+   header('/');
   }
   else {
     print 'API Error'; // Do something
