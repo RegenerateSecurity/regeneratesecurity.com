@@ -13,11 +13,15 @@ else {
 }
 $row = $result->fetch_assoc();
 
-$name        = clean($row['name']);
-$description = clean($row['description']);
-$analysis    = clean($row['analysis']);
-$remediation = clean($row['remediation']);
-$synopsis    = clean($row['synopsis']);
+$name         = clean($row['name']);
+$description  = clean($row['description']);
+$analysis     = clean($row['analysis']);
+$remediation  = clean($row['remediation']);
+$synopsis     = clean($row['synopsis']);
+$cvssv2       = clean($row['CVSSv2Base']);
+$cvssv2vector = clean($row['CVSSv2Vector']);
+$cvssv3       = clean($row['CVSSv3Base']);
+$cvssv3vector = clean($row['CVSSv3Vector']);
 
 $impact      = "Not set";
 if ($row['impact'] == 3)      { $impact = "High"; }
@@ -46,8 +50,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <h3>Technical Analysis</h3>
 <p><?php print $analysis; ?></p>
 <table><tbody>
-<tr><td>Impact:</td><td><?php print $impact; ?></td><br />
-<tr><td>Probability:</td><td><?php print $probability; ?></td></p>
+<tr><td><strong>Impact:</strong></td><td><?php print $impact; ?></td><br />
+<tr><td><strong>Probability:</strong></td><td><?php print $probability; ?></td></p>
+<tr><td><strong>CVSSv3 Base:</strong></td><td><?php print $cvssv3; ?></td></p>
+<tr><td><strong>CVSSv3 Vector:</strong></td><td><?php print $cvssv3vector; ?></td></p>
+<tr><td><strong>CVSSv2 Base:</strong></td><td><?php print $cvssv2; ?></td></p>
+<tr><td><strong>CVSSv2 Vector:</strong></td><td><?php print $cvssv2vector; ?></td></p>
 </tbody></table>
 </div>
 <?php
