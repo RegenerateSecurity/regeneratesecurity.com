@@ -17,7 +17,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <?php
 $result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
 while($row = $result->fetch_assoc()) {
-  print '<tr><td>' . clean($row['id']) . '</td><td><a href="/vuln/' . clean($row['slug']) . '">' . clean($row['name']) . '</a></td></tr>';
+  print '<tr><td>' . clean($row['id']) . '</td><td><a href="/vuln/' . clean($row['slug']) . '/">' . clean($row['name']) . '</a></td></tr>';
 }
 ?>
 </tbody>
