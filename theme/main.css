@@ -123,6 +123,8 @@ h3 {
 .content-wrapper { 
   width: 100%;
   padding-top: 20px;
+}
+.flex-wrapper {
   display: flex;
   flex-wrap: wrap;
 }

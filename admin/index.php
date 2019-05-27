@@ -11,7 +11,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <p>Description here</p>
 </div>
 </div>
-<div class="content-wrapper">
+<div class="flex-wrapper">
 <div class="content-duo content-block">
 </div>
 <div class="content-duo content-block">
