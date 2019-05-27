@@ -117,6 +117,9 @@ h3 {
   display: inline-block;
   padding: 10px;
 }
+.nav-bar li:hover {
+  color: darkred;
+}
 .content-wrapper { 
   width: 100%;
   padding-top: 20px;
