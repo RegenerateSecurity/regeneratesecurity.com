@@ -7,9 +7,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^cookies\/$ /cookies.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^admin\/$ /admin.php [L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^login\/$ /login.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
