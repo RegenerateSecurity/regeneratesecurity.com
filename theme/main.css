@@ -123,6 +123,13 @@ h3 {
 .content-wrapper { 
   width: 100%;
   padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-duo {
+  flex: calc(50% - 30px);
+  max-width: calc(50% - 30px);
+  margin: 15px;
 }
 .content-block {
   padding: 20px;
