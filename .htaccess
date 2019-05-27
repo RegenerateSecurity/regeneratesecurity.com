@@ -31,10 +31,13 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^vulndb\/$ /vulndb.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^admin\/edit-vuln\/([0-9]+)\/$ /admin/edit-vuln.php\?id=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^vuln\/([a-zA-Z0-9-]+)\/$ /vuln.php\?slug=$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^vuln\/([0-9-]+)\/$ /vuln.php\?id=$1 [L]
+RewriteRule ^vuln\/([0-9]+)\/$ /vuln.php\?id=$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^process-registration\/$ /process-registration.php [L]

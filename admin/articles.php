@@ -1,7 +1,7 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/functions.php';
 
-if (!isset($session['privs']) or $session['privs'] !== 2) {
+if (!isset($session['privs']) or $session['privs'] != 2) {
   softRedirect('/login/');
 }
 

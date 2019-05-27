@@ -10,7 +10,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/head.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/topbar.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 
-$result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
+if (!isset($_GET['id'])) {
+  softRedirect('/admin/vulndb.php');
+}
+
+$result = execPrepare($mysqli, "SELECT * FROM vulns WHERE id = ?;", array("i", $_GET['id']));
+$row = $result->fetch_assoc()
+
+$id   = clean($row['id']);
+$name = clean($row['name']);
+$slug = clean($row['slug']);
 ?>
 <div class="content-wrapper">
 <div class="center-text">
@@ -20,12 +29,11 @@ $result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
 </div>
 <div class="content-wrapper">
 <div class="content-block">
-<?php
-$result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
-while($row = $result->fetch_assoc()) {
-  print '<tr><td>' . clean($row['id']) . '</td><td><a href="/admin/edit-vuln/' . clean($row['id']) . '/">' . clean($row['name']) . '</a></td></tr>';
-}
-?>
+<form>
+<input name="id" value="<?php print $id; ?>" readonly>
+<input name="name" value="<?php print $name; ?>">
+<input type="submit">
+</form>
 </div>
 </div>
 </div>
