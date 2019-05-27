@@ -81,7 +81,7 @@ if (isset($_COOKIE['sessionToken'])) {
   $response = postJson('sessionCheck', '1.0', json_encode(array('token' => $_COOKIE['sessionToken'])));
   $responseJson = json_decode($response, true);
   if (isset($responseJson['result']) and $responseJson['result'] == 'valid') {
-    $session = array("privs" => $responseJson['privs'], $email => $responseJson['email']);
+    $session = array("privs" => $responseJson['privs'], "email" => $responseJson['email']);
   }
 }
 ?>

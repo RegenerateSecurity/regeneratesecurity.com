@@ -21,7 +21,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <a href="/admin/articles/">Articles</a>
 </div>
 <div class="content-duo content-block">
-<a href="/admin/articles/">VulnDB</a>
+<a href="/admin/vulndb/">VulnDB</a>
 </div>
 </div>
 </div>
