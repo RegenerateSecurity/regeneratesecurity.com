@@ -30,9 +30,9 @@ $slug = clean($row['slug']);
 <div class="content-wrapper">
 <div class="content-block">
 <form>
-<input name="id" value="<?php print $id; ?>" readonly>
-<input name="name" value="<?php print $name; ?>">
-<input type="submit">
+<input class="login-input" name="id" value="<?php print $id; ?>" readonly>
+<input class="login-input" name="name" value="<?php print $name; ?>">
+<input class="admin-button" type="submit">
 </form>
 </div>
 </div>
