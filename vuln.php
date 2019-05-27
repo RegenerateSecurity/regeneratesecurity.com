@@ -39,14 +39,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <p><?php print $synopsis; ?></p>
 </div>
 <div class="content-block">
-<p><strong>Impact:</strong> <?php print $impact; ?></p>
-<p><strong>Probability:</strong> <?php print $probability; ?></p>
 <h3>Description</h3>
 <p><?php print $description; ?></p>
 <h3>Remediation</h3>
 <p><?php print $remediation; ?></p>
 <h3>Technical Analysis</h3>
 <p><?php print $analysis; ?></p>
+<p><strong>Impact:</strong> <?php print $impact; ?><br />
+<strong>Probability:</strong> <?php print $probability; ?></p>
 
 </div>
 <?php
