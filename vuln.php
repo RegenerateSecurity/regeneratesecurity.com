@@ -2,7 +2,6 @@
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/functions.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/headers.php';
 
-<?php
 if (isset($_GET['id']) {
   $result = execPrepare($mysqli, "SELECT id,name,slug FROM articles WHERE id = ?;", array("i", $_GET['id']));
 }
@@ -12,7 +11,6 @@ else if (isset($_GET['slug']) {
 else {
   softRedirect('/index.php');
 }
-?>
 
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/head.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/topbar.php';
