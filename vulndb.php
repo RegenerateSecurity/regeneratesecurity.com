@@ -11,7 +11,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <p>vulnerability Descriptions for use in Security Test Reports</p>
 </div>
 <div class="content-block">
-Vuln list here
+<?php
+$result = execPrepare($mysqli, $query, $param);
+while ($row = $result->fetch_assoc()) {
+  print $row['id'] . '<br/>' $row['name'];
+}
+?>
 </div>
 </div>
 
