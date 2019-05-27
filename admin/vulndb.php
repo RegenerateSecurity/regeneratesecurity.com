@@ -32,7 +32,7 @@ while($row = $result->fetch_assoc()) {
   print '<tr>';
   print '<td>' . $id . '</td>';
   print '<td>' . $name . '</td>';
-  print '<td><a href="/admin/edit-vuln/' . $id . '/"><input type="button"></a></td>';
+  print '<td><a href="/admin/edit-vuln/' . $id . '/"><input class="admin-button" type="button" value="Edit"></a></td>';
   print '</tr>';
 
 }
