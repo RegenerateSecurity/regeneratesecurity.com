@@ -1,6 +1,19 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/functions.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/headers.php';
+
+<?php
+if (isset($_GET['id']) {
+  $result = execPrepare($mysqli, "SELECT id,name,slug FROM articles WHERE id = ?;", array("i", $_GET['id']));
+}
+else if ()isset($_GET['slug'] {
+  $result = execPrepare($mysqli, "SELECT id,name,slug FROM articles WHERE slug = ?;", array("s", $_GET['slug']));
+}
+else {
+  softRedirect('/index.php');
+}
+?>
+
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/head.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/topbar.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
@@ -15,10 +28,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <tbody>
 <tr><th>ID</th><th>Name</th></tr>
 <?php
-$result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
-while($row = $result->fetch_assoc()) {
-  print '<tr><td>' . clean($row['id']) . '</td><td><a href="/vuln/' . clean($row['slug']) . '">' . clean($row['name']) . '</a></td></tr>';
-}
+$row = $result->fetch_assoc();
+print $row['id'] . '<br/>';
+print $row['name'] . '<br/>';
+print $row['slug'] . '<br/>';
+
+
 ?>
 </tbody>
 </table>
