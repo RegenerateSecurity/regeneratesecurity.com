@@ -10,10 +10,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <h1 class="black-text">Admin</h1>
 <p>Description here</p>
 </div>
-<div class="content-wrapper">
-<div class="content-duo">
 </div>
-<div class="content-duo">
+<div class="content-wrapper">
+<div class="content-duo content-block">
+</div>
+<div class="content-duo content-block">
 </div>
 </div>
 </div>
