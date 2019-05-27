@@ -1,9 +1,28 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/functions.php';
 
-$response = postJson('sessionCheck', '1.0', json_encode(array('token' => $_COOKIE['sessionToken'])));
-$responseJson = json_decode($response, true);
-if (!isset($responseJson['result']) or $responseJson['result'] != 'valid') {
-  // Logged in
+if (!isset($session['privs']) or $session['privs'] == -1) {
+  softRedirect('/login/')
 }
+
+include_once $_SERVER['DOCUMENT_ROOT'] .  '/headers.php';
+include_once $_SERVER['DOCUMENT_ROOT'] .  '/head.php';
+include_once $_SERVER['DOCUMENT_ROOT'] .  '/topbar.php';
+include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
+
 ?>
+<div class="content-wrapper">
+<div class="center-text">
+<h1 class="black-text">Profile here</h1>
+<p>Description here</p>
+</div>
+<div class="content-block">
+Content here
+</div>
+</div>
+
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'] .  '/footer.php';
+?>
+
+
