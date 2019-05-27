@@ -19,6 +19,16 @@ $analysis    = clean($row['analysis']);
 $remediation = clean($row['remediation']);
 $synopsis    = clean($row['synopsis']);
 
+$impact      = "Not set";
+if ($row['impact'] == 3)      { $impact = "High"; }
+else if ($row['impact'] == 2) { $impact = "Medium"; }
+else if ($row['impact'] == 1) { $impact = "Low"; }
+
+$probability = "Not set";
+if ($row['probability'] == 3)      { $probability = "High"; }
+else if ($row['probability'] == 2) { $probability = "Medium"; }
+else if ($row['probability'] == 1) { $probability = "Low"; }
+
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/head.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/topbar.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
@@ -29,6 +39,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <p><?php print $synopsis; ?></p>
 </div>
 <div class="content-block">
+<p><strong>Impact:</strong> <?php print $impact; ?></p>
+<p><strong>Probability:</strong> <?php print $probability; ?></p>
 <h3>Description</h3>
 <p><?php print $description; ?></p>
 <h3>Remediation</h3>
