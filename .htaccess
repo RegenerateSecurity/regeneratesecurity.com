@@ -19,6 +19,18 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^profile\/$ /profile.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^articles\/$ /articles.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^dashboard\/$ /dashboard.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^status\/$ /status.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^vulndb\/$ /vulndb.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^process-registration\/$ /process-registration.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -4,6 +4,6 @@
 <li><a href="/articles/">Articles<a></li>
 <li><a href="/dashboard/">Dashboard</a></li>
 <li><a href="/status/">Status</a></li>
-<li><a href="/vulndb">VulnDB</a></li>
+<li><a href="/vulndb/">VulnDB</a></li>
 </ul>
 </div>
