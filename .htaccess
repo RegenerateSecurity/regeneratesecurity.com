@@ -45,3 +45,8 @@ RewriteRule ^process-login\/$ /process-login.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^error\/404\/$ /error/404.php [L]
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^admin\/articles\/$ /admin/articles.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^admin\/vulndb\/$ /admin/vulndb.php [L]

@@ -7,16 +7,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 ?>
 <div class="content-wrapper">
 <div class="center-text">
-<h1 class="black-text">Admin</h1>
+<h1 class="black-text">Admin VulnDB</h1>
 <p>Description here</p>
 </div>
 </div>
-<div class="flex-wrapper">
-<div class="content-duo content-block">
-<a href="/admin/articles/">Articles</a>
-</div>
-<div class="content-duo content-block">
-<a href="/admin/articles/">VulnDB</a>
+<div class="content-wrapper">
+<div class="content-block">
+Foobar
 </div>
 </div>
 </div>
