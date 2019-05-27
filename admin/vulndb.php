@@ -20,12 +20,25 @@ $result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
 </div>
 <div class="content-wrapper">
 <div class="content-block">
+<table>
+<tbody>
+<tr><th>ID</th><th>Name</th><th>Edit</th></tr>
 <?php
 $result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
 while($row = $result->fetch_assoc()) {
-  print '<tr><td>' . clean($row['id']) . '</td><td><a href="/admin/edit-vuln/' . clean($row['id']) . '/">' . clean($row['name']) . '</a></td></tr>';
+  $id   = clean($row['id']);
+  $name = clean($row['name']);
+
+  print '<tr>';
+  print '<td>' . $id . '</td>';
+  print '<td>' . $name . '</td>';
+  print '<td><a href="/admin/edit-vuln/' . $id . '/"><input type="button"></a></td>';
+  print '</tr>';
+
 }
 ?>
+</tbody>
+</table>
 </div>
 </div>
 </div>

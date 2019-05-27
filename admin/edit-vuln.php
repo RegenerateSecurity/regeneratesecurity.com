@@ -15,7 +15,7 @@ if (!isset($_GET['id'])) {
 }
 
 $result = execPrepare($mysqli, "SELECT * FROM vulns WHERE id = ?;", array("i", $_GET['id']));
-$row = $result->fetch_assoc()
+$row = $result->fetch_assoc();
 
 $id   = clean($row['id']);
 $name = clean($row['name']);
