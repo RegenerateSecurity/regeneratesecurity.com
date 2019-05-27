@@ -2,7 +2,7 @@
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/functions.php';
 
 if (!isset($session['privs']) or $session['privs'] == -1) {
-  softRedirect('/login/')
+  softRedirect('/login/');
 }
 
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/headers.php';
