@@ -1,6 +1,9 @@
 <?php
 function drawTopBar($session) {
   if (isset($session['privs']) and $session['privs'] > -1) {
+    if ($session['privs'] == 2) {
+      print '<a href="/admin/">Admin</a> | ';
+    }
     print '<a href="/profile/">Profile</a> | <a href="/logout/">Log Out</a>';
   }
   else {
