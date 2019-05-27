@@ -52,9 +52,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <table><tbody>
 <tr><td><strong>Impact:</strong></td><td><?php print $impact; ?></td><br />
 <tr><td><strong>Probability:</strong></td><td><?php print $probability; ?></td></p>
-<tr><td><strong>CVSSv3 Base:</strong></td><td><?php print $cvssv3; ?></td></p>
+<tr><td><strong>CVSSv3:</strong></td><td><?php print $cvssv3; ?></td></p>
 <tr><td><strong>CVSSv3 Vector:</strong></td><td><?php print $cvssv3vector; ?></td></p>
-<tr><td><strong>CVSSv2 Base:</strong></td><td><?php print $cvssv2; ?></td></p>
+<tr><td><strong>CVSSv2:</strong></td><td><?php print $cvssv2; ?></td></p>
 <tr><td><strong>CVSSv2 Vector:</strong></td><td><?php print $cvssv2vector; ?></td></p>
 </tbody></table>
 </div>
