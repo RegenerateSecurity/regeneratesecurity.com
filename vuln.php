@@ -31,6 +31,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <div class="content-block">
 <h3>Description</h3>
 <p><?php print $description; ?></p>
+<h3>Remediation</h3>
+<p><?php print $remediation; ?></p>
+<h3>Technical Analysis</h3>
+<p><?php print $analysis; ?></p>
+
 </div>
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/footer.php';
