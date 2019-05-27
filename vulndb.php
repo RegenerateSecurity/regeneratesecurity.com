@@ -14,7 +14,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <?php
 $result = execPrepare($mysqli, $query, $param);
 while ($row = $result->fetch_assoc()) {
-  print $row['id'] . '<br/>' $row['name'];
+  print $row['id'] . '<br/>' . $row['name'];
 }
 ?>
 </div>
