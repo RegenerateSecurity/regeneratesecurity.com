@@ -11,12 +11,17 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <p>vulnerability Descriptions for use in Security Test Reports</p>
 </div>
 <div class="content-block">
+<table>
+<tbody>
+<tr><th>ID</th><th>Name</th></tr>
 <?php
 $result = $mysqli->query("SELECT id,name FROM vulns WHERE hidden = 0;");
 while($row = $result->fetch_assoc()) {
-  print $row['id'] . '<br/>' . $row['name'];
+  print '<tr><td>' . $row['id'] . '</td><td>' . $row['name'] . '</td></tr>';
 }
 ?>
+</tbody>
+</table>
 </div>
 </div>
 
