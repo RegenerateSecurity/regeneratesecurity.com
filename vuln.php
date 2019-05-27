@@ -45,9 +45,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 <p><?php print $remediation; ?></p>
 <h3>Technical Analysis</h3>
 <p><?php print $analysis; ?></p>
-<p><strong>Impact:</strong> <?php print $impact; ?><br />
-<strong>Probability:</strong> <?php print $probability; ?></p>
-
+<table><tbody>
+<tr><td>Impact:</td><td><?php print $impact; ?></td><br />
+<tr><td>Probability:</td><td><?php print $probability; ?></td></p>
+</tbody></table>
 </div>
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/footer.php';
