@@ -15,7 +15,7 @@ $result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
 <div class="content-wrapper">
 <div class="center-text">
 <h1 class="black-text">Admin VulnDB</h1>
-<p>Description here</p>
+<p>Update vulnerability description details</p>
 </div>
 </div>
 <div class="content-wrapper">
