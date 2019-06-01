@@ -22,6 +22,9 @@ body {
   line-height: 1.5;
   color: #859196;
 }
+table {
+  font-size: inherit;
+}
 .cookie-text {
   width: calc(100% - 90px);
   display: inline-block;
