@@ -14,7 +14,7 @@ if (!isset($_POST['id']) or $_POST['id'] == "") {
 
 if (!isset($_POST['name']) or !isset($_POST['slug']) or !isset($_POST['description']) or !isset($_POST['analysis']) or
     !isset($_POST['remediation']) or !isset($_POST['synopsis']) or !isset($_POST['CVSSv2Base']) or
-    !isset($_POST['CVSSv2Vector']) or !isset($_POST['CVSSv3Base']) or !isset($_POST['CVSSv3Vector']) {
+    !isset($_POST['CVSSv2Vector']) or !isset($_POST['CVSSv3Base']) or !isset($_POST['CVSSv3Vector'])) {
       softRedirect('/admin/edit-vuln/' . clean($_POST['id']) . '/');
 }
 
