@@ -10,7 +10,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/head.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/topbar.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 
-$result = $mysqli->query("SELECT MAX(id) AS highestID FROM articles;");
+$result = $mysqli->query("SELECT MAX(id) AS highestID FROM vulns;");
 $row    = $result->fetch_assoc();
 $id     = intval(clean($row['highestID'])) + 1;
 ?>
