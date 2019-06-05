@@ -10,7 +10,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/head.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/topbar.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 
-$result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
+$result = $mysqli->query("SELECT id,name,hidden FROM vulns");
 ?>
 <div class="content-wrapper">
 <div class="center-text">
@@ -24,10 +24,10 @@ $result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
 <tbody>
 <tr><th>ID</th><th>Name</th><th>Edit</th></tr>
 <?php
-$result = $mysqli->query("SELECT id,name,slug FROM vulns WHERE hidden = 0;");
 while($row = $result->fetch_assoc()) {
   $id   = clean($row['id']);
   $name = clean($row['name']);
+  $hidden = clean($row['hidden']);
 
   print '<tr>';
   print '<td>' . $id . '</td>';
