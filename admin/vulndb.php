@@ -39,6 +39,7 @@ while($row = $result->fetch_assoc()) {
 ?>
 </tbody>
 </table>
+<a href="/admin/new-vuln/"><input class="admin-button" type="button" value="Create"></a>
 </div>
 </div>
 </div>

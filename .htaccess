@@ -37,6 +37,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^admin\/update-vuln\/$ /admin/update-vuln.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^admin\/new-vuln\/$ /admin/new-vuln.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^admin\/insert-vuln\/$ /admin/insert-vuln.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^vuln\/([a-zA-Z0-9-]+)\/$ /vuln.php\?slug=$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
