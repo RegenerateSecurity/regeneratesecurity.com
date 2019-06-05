@@ -26,21 +26,6 @@ if ($_POST['name'] == "" or $_POST['slug'] == "" or $_POST['description'] == "" 
       softRedirect('/admin/new-vuln/');
 }
 
-print "Ready to do the updatey bit now";
-
-//$result = execPrepare($mysqli, "UPDATE vulns SET name = ?, slug = ? WHERE id = ?;", array("ssi", $_POST['name'], $_POST['slug'], $_POST['id']));
-//$row = $result->fetch_assoc();
-
-//$_POST['id']
-//$_POST['name']
-//$_POST['slug']
-//$_POST['description']
-//$_POST['analysis']
-//$_POST['remediation']
-//$_POST['synopsis']
-//$_POST['CVSSv2Base']
-//$_POST['CVSSv2Vector']
-//$_POST['CVSSv3Base']
-//$_POST['CVSSv3Vector']
-
+execPrepare($mysqli,"INSERT INTO vulns (id,name,slug,description,analysis,remediation,synopsis,cvssv2base,cvssv2vector,cvssv3base,cvssv3vector) VALUES (?,?,?,?,?,?,?,?,?,?,?);", array("issssssssss", $_POST['id'], $_POST['name'],$_POST['slug'],$_POST['description'],$_POST['analysis'],$_POST['remediation'],$_POST['synopsis'],$_POST['CVSSv2Base'],$_POST['CVSSv2Vector'],$_POST['CVSSv3Base'],$_POST['CVSSv3Vector']);
+softRedirect('/admin/vulndb/');
 

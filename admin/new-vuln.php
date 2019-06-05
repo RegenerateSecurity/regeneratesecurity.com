@@ -10,14 +10,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] .  '/head.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/topbar.php';
 include_once $_SERVER['DOCUMENT_ROOT'] .  '/navbar.php';
 
-if (!isset($_GET['id'])) {
-  softRedirect('/admin/vulndb.php');
-}
-
 $result = $mysqli->query("SELECT MAX(id) AS highestID FROM articles;");
 $row    = $result->fetch_assoc();
 $id     = intval(clean($row['highestID'])) + 1;
-
 ?>
 <div class="content-wrapper">
 <div class="center-text">
