@@ -31,10 +31,10 @@ $id     = intval(clean($row['highestID'])) + 1;
 <textarea class="login-input" name="description" placeholder="Description" rows=10></textarea>
 <textarea class="login-input" name="remediation" placeholder="Remediation" rows=10></textarea>
 <textarea class="login-input" name="analysis" placeholder="Analysis" rows=3></textarea>
-<input class="login-input" name="CVSSv3Base" placeholder="CVSSv3 Base">
-<input class="login-input" name="CVSSv3Vector" placeholder="CVSSv3Vector">
-<input class="login-input" name="CVSSv2Base" placeholder="CVSSv2 Base">
-<input class="login-input" name="CVSSv2Vector" placeholder="CVSSv2 Vector">
+<input class="login-input" name="CVSSv3Base" placeholder="CVSSv3 Base" value="0.0">
+<input class="login-input" name="CVSSv3Vector" placeholder="CVSSv3Vector" value="AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N">
+<input class="login-input" name="CVSSv2Base" placeholder="CVSSv2 Base" value="0.0">
+<input class="login-input" name="CVSSv2Vector" placeholder="CVSSv2 Vector" value="AV:N/AC:L/Au:N/C:N/I:N/A:N">
 
 <select name="impact" class="login-input">
 <option value="0">Informational</option>
