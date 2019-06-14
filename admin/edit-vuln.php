@@ -64,13 +64,12 @@ $probability  = clean($row['probability']);
 </select>
 
 <select name="probability" class="login-input">
-<option <?php if($impact == 0) { print "selected "; } ?>value="0">Informational Impact</option>
-<option <?php if($impact == 1) { print "selected "; } ?>value="1">Low Impact</option>
-<option <?php if($impact == 2) { print "selected "; } ?>value="2">Medium Impact</option>
-<option <?php if($impact == 3) { print "selected "; } ?>value="3">High Impact</option>
-<option <?php if($impact == 4) { print "selected "; } ?>value="4">Critical Impact</option>
+<option <?php if($probability == 0) { print "selected "; } ?>value="0">Informational Probability</option>
+<option <?php if($probability == 1) { print "selected "; } ?>value="1">Low Probability</option>
+<option <?php if($probability == 2) { print "selected "; } ?>value="2">Medium Probability</option>
+<option <?php if($probability == 3) { print "selected "; } ?>value="3">High Probability</option>
+<option <?php if($probability == 4) { print "selected "; } ?>value="4">Critical Probability</option>
 </select>
-
 
 <select name="hidden" class="login-input">
 <option <?php if($hidden == 0) { print "selected "; } ?>value="0">Visible</option>
