@@ -46,7 +46,7 @@ $probability  = clean($row['probability']);
 <input class="login-input dim-input" name="id" value="<?php print $id; ?>" readonly>
 <input class="login-input" name="name" value="<?php print $name; ?>" placeholder="Name">
 <input class="login-input" name="slug" value="<?php print $slug; ?>" placeholder="Slug">
-<textarea class="login-input" name="Synopsis" placeholder="Synopsis" rows=3><?php print $synopsis; ?></textarea>
+<textarea class="login-input" name="synopsis" placeholder="Synopsis" rows=3><?php print $synopsis; ?></textarea>
 <textarea class="login-input" name="description" placeholder="Description" rows=8><?php print $description; ?></textarea>
 <textarea class="login-input" name="remediation" placeholder="Remediation" rows=8><?php print $remediation; ?></textarea>
 <textarea class="login-input" name="analysis" placeholder="Remediation" rows=3><?php print $analysis; ?></textarea>

@@ -27,10 +27,10 @@ $id     = intval(clean($row['highestID'])) + 1;
 <input class="login-input dim-input" name="id" value="<?php print $id; ?>" readonly>
 <input class="login-input" name="name" placeholder="Name">
 <input class="login-input" name="slug" placeholder="Slug">
-<input class="login-input" name="synopsis" placeholder="Synopsis">
-<input class="login-input" name="description" placeholder="Description">
-<input class="login-input" name="remediation" placeholder="Remediation">
-<input class="login-input" name="analysis" placeholder="Analysis">
+<textarea class="login-input" name="synopsis" placeholder="Synopsis" rows=3></textarea>
+<textarea class="login-input" name="description" placeholder="Description" rows=10></textarea>
+<textarea class="login-input" name="remediation" placeholder="Remediation" rows=10></textarea>
+<textarea class="login-input" name="analysis" placeholder="Analysis" rows=3></textarea>
 <input class="login-input" name="CVSSv3Base" placeholder="CVSSv3 Base">
 <input class="login-input" name="CVSSv3Vector" placeholder="CVSSv3Vector">
 <input class="login-input" name="CVSSv2Base" placeholder="CVSSv2 Base">
