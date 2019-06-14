@@ -14,7 +14,8 @@ if (!isset($_POST['id']) or $_POST['id'] == "") {
 
 if (!isset($_POST['name']) or !isset($_POST['slug']) or !isset($_POST['description']) or !isset($_POST['analysis']) or
     !isset($_POST['remediation']) or !isset($_POST['synopsis']) or !isset($_POST['CVSSv2Base']) or
-    !isset($_POST['CVSSv2Vector']) or !isset($_POST['CVSSv3Base']) or !isset($_POST['CVSSv3Vector'])) {
+    !isset($_POST['CVSSv2Vector']) or !isset($_POST['CVSSv3Base']) or !isset($_POST['CVSSv3Vector'])
+    !isset($_POST['hidden'])) {
       softRedirect('/admin/new-vuln/');
 }
 
@@ -22,10 +23,10 @@ if (!isset($_POST['name']) or !isset($_POST['slug']) or !isset($_POST['descripti
 
 if ($_POST['name'] == "" or $_POST['slug'] == "" or $_POST['description'] == "" or $_POST['analysis'] == "" or
     $_POST['remediation'] == "" or $_POST['synopsis'] == "" or $_POST['CVSSv2Base'] == "" or $_POST['CVSSv2Vector'] == "" or
-    $_POST['CVSSv3Base'] == "" or $_POST['CVSSv3Vector'] == "") {
+    $_POST['CVSSv3Base'] == "" or $_POST['CVSSv3Vector'] == "" or $_POST['hidden'] == "") {
       softRedirect('/admin/new-vuln/');
 }
 
-execPrepare($mysqli,"INSERT INTO vulns (id,name,slug,description,analysis,remediation,synopsis,cvssv2base,cvssv2vector,cvssv3base,cvssv3vector) VALUES (?,?,?,?,?,?,?,?,?,?,?);", array("issssssssss", $_POST['id'], $_POST['name'],$_POST['slug'],$_POST['description'],$_POST['analysis'],$_POST['remediation'],$_POST['synopsis'],$_POST['CVSSv2Base'],$_POST['CVSSv2Vector'],$_POST['CVSSv3Base'],$_POST['CVSSv3Vector']));
+execPrepare($mysqli,"INSERT INTO vulns (id,name,slug,description,analysis,remediation,synopsis,cvssv2base,cvssv2vector,cvssv3base,cvssv3vector,hidden) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);", array("issssssssssi", $_POST['id'], $_POST['name'],$_POST['slug'],$_POST['description'],$_POST['analysis'],$_POST['remediation'],$_POST['synopsis'],$_POST['CVSSv2Base'],$_POST['CVSSv2Vector'],$_POST['CVSSv3Base'],$_POST['CVSSv3Vector'], $_POST['hidden']));
 softRedirect('/admin/vulndb/');
 

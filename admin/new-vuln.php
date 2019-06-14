@@ -35,6 +35,11 @@ $id     = intval(clean($row['highestID'])) + 1;
 <input class="login-input" name="CVSSv3Vector" placeholder="CVSSv3Vector">
 <input class="login-input" name="CVSSv2Base" placeholder="CVSSv2 Base">
 <input class="login-input" name="CVSSv2Vector" placeholder="CVSSv2 Vector">
+<select name="hidden">
+<option value="0">Visible</option>
+<option value="1">Hidden</option>
+</select>
+
 <input class="admin-button" type="submit">
 </form>
 </div>

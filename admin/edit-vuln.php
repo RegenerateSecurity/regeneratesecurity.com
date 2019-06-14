@@ -28,6 +28,7 @@ $cvssv2       = clean($row['CVSSv2Base']);
 $cvssv2vector = clean($row['CVSSv2Vector']);
 $cvssv3       = clean($row['CVSSv3Base']);
 $cvssv3vector = clean($row['CVSSv3Vector']);
+$hidden       = clean($row['hidden']);		// TODO: Swap ints from clean() to intval()
 
 ?>
 <div class="content-wrapper">
@@ -52,6 +53,10 @@ $cvssv3vector = clean($row['CVSSv3Vector']);
 <input class="login-input" name="CVSSv2Base" value="<?php print $cvssv2; ?>" placeholder="CVSSv2 Base">
 <input class="login-input" name="CVSSv2Vector" value="<?php print $cvssv2vector; ?>" placeholder="CVSSv2 Vector">
 <input class="admin-button" type="submit">
+<select name="hidden">
+<option <?php if($hidden == 0) { print "selected "; } ?>value="0">Visible</option>
+<option <?php if($hidden == 1) { print "selected "; } ?>value="1">Hidden</option>
+</select>
 </form>
 </div>
 </div>
