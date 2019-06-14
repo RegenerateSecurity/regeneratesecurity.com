@@ -49,7 +49,7 @@ $probability  = clean($row['probability']);
 <textarea class="login-input" name="synopsis" placeholder="Synopsis" rows=3><?php print $synopsis; ?></textarea>
 <textarea class="login-input" name="description" placeholder="Description" rows=8><?php print $description; ?></textarea>
 <textarea class="login-input" name="remediation" placeholder="Remediation" rows=8><?php print $remediation; ?></textarea>
-<textarea class="login-input" name="analysis" placeholder="Remediation" rows=3><?php print $analysis; ?></textarea>
+<textarea class="login-input" name="analysis" placeholder="Analysis" rows=3><?php print $analysis; ?></textarea>
 <input class="login-input" name="CVSSv3Base" value="<?php print $cvssv3; ?>" placeholder="CVSSv3 Base">
 <input class="login-input" name="CVSSv3Vector" value="<?php print $cvssv3vector; ?>" placeholder="CVSSv3Vector">
 <input class="login-input" name="CVSSv2Base" value="<?php print $cvssv2; ?>" placeholder="CVSSv2 Base">
