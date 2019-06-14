@@ -56,19 +56,19 @@ $probability  = clean($row['probability']);
 <input class="login-input" name="CVSSv2Vector" value="<?php print $cvssv2vector; ?>" placeholder="CVSSv2 Vector">
 
 <select name="impact" class="login-input">
-<option <?php if($impact == 0) { print "selected "; } ?>value="0">Informational</option>
-<option <?php if($impact == 1) { print "selected "; } ?>value="1">Low</option>
-<option <?php if($impact == 2) { print "selected "; } ?>value="2">Medium</option>
-<option <?php if($impact == 3) { print "selected "; } ?>value="3">High</option>
-<option <?php if($impact == 4) { print "selected "; } ?>value="4">Critical</option>
+<option <?php if($impact == 0) { print "selected "; } ?>value="0">Informational Impact</option>
+<option <?php if($impact == 1) { print "selected "; } ?>value="1">Low Impact</option>
+<option <?php if($impact == 2) { print "selected "; } ?>value="2">Medium Impact</option>
+<option <?php if($impact == 3) { print "selected "; } ?>value="3">High Impact</option>
+<option <?php if($impact == 4) { print "selected "; } ?>value="4">Critical Impact</option>
 </select>
 
 <select name="probability" class="login-input">
-<option <?php if($impact == 0) { print "selected "; } ?>value="0">Informational</option>
-<option <?php if($impact == 1) { print "selected "; } ?>value="1">Low</option>
-<option <?php if($impact == 2) { print "selected "; } ?>value="2">Medium</option>
-<option <?php if($impact == 3) { print "selected "; } ?>value="3">High</option>
-<option <?php if($impact == 4) { print "selected "; } ?>value="4">Critical</option>
+<option <?php if($impact == 0) { print "selected "; } ?>value="0">Informational Impact</option>
+<option <?php if($impact == 1) { print "selected "; } ?>value="1">Low Impact</option>
+<option <?php if($impact == 2) { print "selected "; } ?>value="2">Medium Impact</option>
+<option <?php if($impact == 3) { print "selected "; } ?>value="3">High Impact</option>
+<option <?php if($impact == 4) { print "selected "; } ?>value="4">Critical Impact</option>
 </select>
 
 
