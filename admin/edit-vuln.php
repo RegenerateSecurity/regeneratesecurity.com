@@ -52,11 +52,11 @@ $hidden       = clean($row['hidden']);		// TODO: Swap ints from clean() to intva
 <input class="login-input" name="CVSSv3Vector" value="<?php print $cvssv3vector; ?>" placeholder="CVSSv3Vector">
 <input class="login-input" name="CVSSv2Base" value="<?php print $cvssv2; ?>" placeholder="CVSSv2 Base">
 <input class="login-input" name="CVSSv2Vector" value="<?php print $cvssv2vector; ?>" placeholder="CVSSv2 Vector">
-<input class="admin-button" type="submit">
-<select name="hidden">
+<select name="hidden" class="login-input">
 <option <?php if($hidden == 0) { print "selected "; } ?>value="0">Visible</option>
 <option <?php if($hidden == 1) { print "selected "; } ?>value="1">Hidden</option>
 </select>
+<input class="admin-button" type="submit">
 </form>
 </div>
 </div>
