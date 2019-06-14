@@ -22,7 +22,7 @@ $result = $mysqli->query("SELECT id,name,hidden FROM vulns");
 <div class="content-block">
 <table>
 <tbody>
-<tr><th>ID</th><th>Name</th><th>Edit</th></tr>
+<tr><th>ID</th><th>Name</th><th>Edit</th><th>Hidden</th></tr>
 <?php
 while($row = $result->fetch_assoc()) {
   $id   = clean($row['id']);
@@ -32,6 +32,9 @@ while($row = $result->fetch_assoc()) {
   print '<tr>';
   print '<td>' . $id . '</td>';
   print '<td>' . $name . '</td>';
+  print '<td>';
+  if ($hidden == 1) { print "Hidden"; } else { print "Visible"; }
+  print '</td>';
   print '<td><a href="/admin/edit-vuln/' . $id . '/"><input class="admin-button" type="button" value="Edit"></a></td>';
   print '</tr>';
 
