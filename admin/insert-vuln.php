@@ -23,7 +23,8 @@ if (!isset($_POST['name']) or !isset($_POST['slug']) or !isset($_POST['descripti
 
 if ($_POST['name'] == "" or $_POST['slug'] == "" or $_POST['description'] == "" or $_POST['analysis'] == "" or
     $_POST['remediation'] == "" or $_POST['synopsis'] == "" or $_POST['CVSSv2Base'] == "" or $_POST['CVSSv2Vector'] == "" or
-    $_POST['CVSSv3Base'] == "" or $_POST['CVSSv3Vector'] == "" or $_POST['hidden'] == "" or $_POST['impact'] or $_POST['probability']) {
+    $_POST['CVSSv3Base'] == "" or $_POST['CVSSv3Vector'] == "" or $_POST['hidden'] == "" or $_POST['impact'] == "" or 
+    $_POST['probability'] == "") {
       softRedirect('/admin/new-vuln/');
 }
 
