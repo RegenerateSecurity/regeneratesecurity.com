@@ -46,12 +46,10 @@ $probability  = clean($row['probability']);
 <input class="login-input dim-input" name="id" value="<?php print $id; ?>" readonly>
 <input class="login-input" name="name" value="<?php print $name; ?>" placeholder="Name">
 <input class="login-input" name="slug" value="<?php print $slug; ?>" placeholder="Slug">
-<input class="login-input" name="synopsis" value="<?php print $synopsis; ?>" placeholder="Synopsis">
-<textarea class="login-input" name="description" placeholder="Description">
-<?php print $description; ?>
-</textarea>
-<input class="login-input" name="remediation" value="<?php print $remediation; ?>" placeholder="Remediation">
-<input class="login-input" name="analysis" value="<?php print $analysis; ?>" placeholder="Analysis">
+<textarea class="login-input" name="Synopsis" placeholder="Synopsis" rows=3><?php print $synopsis; ?></textarea>
+<textarea class="login-input" name="description" placeholder="Description" rows=8><?php print $description; ?></textarea>
+<textarea class="login-input" name="remediation" placeholder="Remediation" rows=8><?php print $remediation; ?></textarea>
+<textarea class="login-input" name="analysis" placeholder="Remediation" rows=3><?php print $analysis; ?></textarea>
 <input class="login-input" name="CVSSv3Base" value="<?php print $cvssv3; ?>" placeholder="CVSSv3 Base">
 <input class="login-input" name="CVSSv3Vector" value="<?php print $cvssv3vector; ?>" placeholder="CVSSv3Vector">
 <input class="login-input" name="CVSSv2Base" value="<?php print $cvssv2; ?>" placeholder="CVSSv2 Base">
