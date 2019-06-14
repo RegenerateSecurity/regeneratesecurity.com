@@ -47,7 +47,9 @@ $probability  = clean($row['probability']);
 <input class="login-input" name="name" value="<?php print $name; ?>" placeholder="Name">
 <input class="login-input" name="slug" value="<?php print $slug; ?>" placeholder="Slug">
 <input class="login-input" name="synopsis" value="<?php print $synopsis; ?>" placeholder="Synopsis">
-<input class="login-input" name="description" value="<?php print $description; ?>" placeholder="Description">
+<textarea class="login-input" name="description" placeholder="Description">
+<?php print $description; ?>
+</textarea>
 <input class="login-input" name="remediation" value="<?php print $remediation; ?>" placeholder="Remediation">
 <input class="login-input" name="analysis" value="<?php print $analysis; ?>" placeholder="Analysis">
 <input class="login-input" name="CVSSv3Base" value="<?php print $cvssv3; ?>" placeholder="CVSSv3 Base">
