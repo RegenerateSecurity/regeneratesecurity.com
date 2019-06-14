@@ -35,6 +35,23 @@ $id     = intval(clean($row['highestID'])) + 1;
 <input class="login-input" name="CVSSv3Vector" placeholder="CVSSv3Vector">
 <input class="login-input" name="CVSSv2Base" placeholder="CVSSv2 Base">
 <input class="login-input" name="CVSSv2Vector" placeholder="CVSSv2 Vector">
+
+<select name="impact" class="login-input">
+<option value="0">Informational</option>
+<option value="1">Low</option>
+<option value="2">Medium</option>
+<option value="3">High</option>
+<option value="4">Critical</option>
+</select>
+
+<select name="probability" class="login-input">
+<option value="0">Informational</option>
+<option value="1">Low</option>
+<option value="2">Medium</option>
+<option value="3">High</option>
+<option value="4">Critical</option>
+</select>
+
 <select class="login-input" name="hidden">
 <option value="0">Visible</option>
 <option value="1">Hidden</option>

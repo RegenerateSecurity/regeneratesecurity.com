@@ -29,6 +29,8 @@ $cvssv2vector = clean($row['CVSSv2Vector']);
 $cvssv3       = clean($row['CVSSv3Base']);
 $cvssv3vector = clean($row['CVSSv3Vector']);
 $hidden       = clean($row['hidden']);		// TODO: Swap ints from clean() to intval()
+$impact       = clean($row['impact']);
+$probability  = clean($row['probability']);
 
 ?>
 <div class="content-wrapper">
@@ -52,6 +54,24 @@ $hidden       = clean($row['hidden']);		// TODO: Swap ints from clean() to intva
 <input class="login-input" name="CVSSv3Vector" value="<?php print $cvssv3vector; ?>" placeholder="CVSSv3Vector">
 <input class="login-input" name="CVSSv2Base" value="<?php print $cvssv2; ?>" placeholder="CVSSv2 Base">
 <input class="login-input" name="CVSSv2Vector" value="<?php print $cvssv2vector; ?>" placeholder="CVSSv2 Vector">
+
+<select name="impact" class="login-input">
+<option <?php if($impact == 0) { print "selected "; } ?>value="0">Informational</option>
+<option <?php if($impact == 1) { print "selected "; } ?>value="1">Low</option>
+<option <?php if($impact == 2) { print "selected "; } ?>value="2">Medium</option>
+<option <?php if($impact == 3) { print "selected "; } ?>value="3">High</option>
+<option <?php if($impact == 4) { print "selected "; } ?>value="4">Critical</option>
+</select>
+
+<select name="probability" class="login-input">
+<option <?php if($impact == 0) { print "selected "; } ?>value="0">Informational</option>
+<option <?php if($impact == 1) { print "selected "; } ?>value="1">Low</option>
+<option <?php if($impact == 2) { print "selected "; } ?>value="2">Medium</option>
+<option <?php if($impact == 3) { print "selected "; } ?>value="3">High</option>
+<option <?php if($impact == 4) { print "selected "; } ?>value="4">Critical</option>
+</select>
+
+
 <select name="hidden" class="login-input">
 <option <?php if($hidden == 0) { print "selected "; } ?>value="0">Visible</option>
 <option <?php if($hidden == 1) { print "selected "; } ?>value="1">Hidden</option>
